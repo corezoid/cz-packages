@@ -1,0 +1,12 @@
+# Source: kube_release/charts/kube/templates/secrets.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: "foo-secret"
+  labels:
+    fooLbl: "fooLblVal"
+  annotations:
+    fooAnnot: "fooAnnotVal"
+stringData:
+  fooKey: 
+  barKey:

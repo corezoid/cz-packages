@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.corezoid.com/packages/docker-registry/main.json",
+  "type": "object",
+  "required": [ "docker-registry" ],
+  "properties": {
+    "docker-registry": {
+      "type": "object",
+      "default": {
+        "image": {
+          "repository": "registry",
+          "tag": "2.7.1",
+          "pullPolicy": "IfNotPresent"
+        }
+      },
+      "description": "For more info visit: https://artifacthub.io/packages/helm/twuni/docker-registry"
+    }
+  }
+}

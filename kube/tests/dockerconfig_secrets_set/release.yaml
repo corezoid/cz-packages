@@ -1,0 +1,31 @@
+kube:
+    helm:
+        dockerconfig_secrets: 
+            - name: foo-secret
+              labels:
+                  fooLbl: fooLblVal
+              annotations:
+                  fooAnnot: fooAnnotVal
+              config:
+                  auths:
+                      foo.example.com:
+                          username: fooUsername
+                          password: fooPassword
+release:
+    name: 'kube_release'
+    helm:
+        enabled: true
+        chart:
+            version: '0.1.2'
+            description: 'aDescription'
+        context: ''
+        namespace: 'aNs'
+        release: 'aRls'
+        deploy: ['kube']
+    require:
+        kube: 'aVersion'
+    repositories:
+        kube:
+            source: 'local'
+            local:
+                path: '../../'

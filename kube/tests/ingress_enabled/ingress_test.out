@@ -1,0 +1,18 @@
+# Source: kube_release/charts/kube/templates/ingress.yaml
+apiVersion: "networking.k8s.io/v1beta1"
+kind: Ingress
+metadata:
+  name: "foo-ingress"
+  labels:
+    fooLbl: "fooLblVal"
+  annotations:
+    fooAnn: "fooAnnVal"
+spec:
+  rules:
+    - host: "foo.example.com"
+      http:
+        paths:
+          - path: "/foo/path"
+            backend:
+              serviceName: "foo_service"
+              servicePort: 9986

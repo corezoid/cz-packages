@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.corezoid.com/packages/redis/main.json",
+  "type": "object",
+  "required": [ "redis" ],
+  "properties": {
+    "redis": {
+      "type": "object",
+      "default": {
+        "main": {
+          "host": null,
+          "port": 6379,
+          "password": ""
+        }
+      },
+      "patternProperties": {
+        ".+": { "$ref": "https://schema.corezoid.com/packages/redis/connection.json" }
+      }
+    }
+  }
+}

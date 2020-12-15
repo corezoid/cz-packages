@@ -1,0 +1,9 @@
+release:
+    name: 'kube_release'
+    require:
+        kube: 'aVersion'
+    repositories:
+        kube:
+            source: 'local'
+            local:
+                path: '../'

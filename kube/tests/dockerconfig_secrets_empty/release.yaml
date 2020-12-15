@@ -1,0 +1,21 @@
+kube:
+    helm:
+        dockerconfig_secrets: []
+release:
+    name: 'kube_release'
+    helm:
+        enabled: true
+        chart:
+            version: '0.1.2'
+            description: 'aDescription'
+        context: ''
+        namespace: 'aNs'
+        release: 'aRls'
+        deploy: ['kube']
+    require:
+        kube: 'aVersion'
+    repositories:
+        kube:
+            source: 'local'
+            local:
+                path: '../../'

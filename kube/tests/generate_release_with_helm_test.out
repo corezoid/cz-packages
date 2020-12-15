@@ -1,0 +1,41 @@
+kube_goodies:
+    dockerconfig_secrets: []
+    # Alternative settings:
+    # 0#
+    # Property patterns:
+    # .+:
+    # null
+    # annotations: {}
+    # api_version: 'networking.k8s.io/v1beta1'
+    # [REQUIRED]: boolean.
+    # enabled: true
+    # Property patterns:
+    # .+:
+    # null
+    # labels: {}
+    # [REQUIRED]: string.
+    # name: ''
+    # [REQUIRED]: array.
+    # rules: []
+    ingress:
+        # [REQUIRED]: boolean.
+        enabled: false
+    secrets: []
+release:
+    name: 'kube_release'
+    helm:
+        enabled: true
+        chart:
+            version: '0.1.2'
+            description: 'aDescription'
+        context: ''
+        namespace: ''
+        release: ''
+        deploy: ['kube']
+    require:
+        kube: 'aVersion'
+    repositories:
+        kube:
+            source: 'local'
+            local:
+                path: '../'
