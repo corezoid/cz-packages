@@ -1,9 +1,0 @@
-release:
-    name: 'kube_goodies_release'
-    require:
-        kube_goodies: 'aVersion'
-    repositories:
-        kube_goodies:
-            source: 'local'
-            local:
-                path: '../'

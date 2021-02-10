@@ -1,5 +1,0 @@
-component_name: rabbitmq
-
-helm:
-  enabled: false
-  global: true

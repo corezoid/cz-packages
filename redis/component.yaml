@@ -1,5 +1,0 @@
-component_name: redis
-
-helm:
-  enabled: false
-  global: true
