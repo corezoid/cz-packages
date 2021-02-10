@@ -1,16 +1,15 @@
 kube:
-    helm:
-        dockerconfig_secrets: 
-            - name: foo-secret
-              labels:
-                  fooLbl: fooLblVal
-              annotations:
-                  fooAnnot: fooAnnotVal
-              config:
-                  auths:
-                      foo.example.com:
-                          username: fooUsername
-                          password: fooPassword
+    dockerconfig_secrets: 
+        - name: foo-secret
+          labels:
+              fooLbl: fooLblVal
+          annotations:
+              fooAnnot: fooAnnotVal
+          config:
+              auths:
+                  foo.example.com:
+                      username: fooUsername
+                      password: fooPassword
 release:
     name: 'kube_release'
     helm:

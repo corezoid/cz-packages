@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.corezoid.com/packages/rabbitmq_credentials/main.json",
+  "type": "object",
+  "required": [ "rabbitmq_credentials" ],
+  "rabbitmq_credentials": {
+    "rabbitmq": {
+      "type": "object",
+      "default": {
+        "main": {
+          "host": null,
+          "port": 5672,
+          "username": "guest",
+          "password": "guest",
+          "vhost": "/"
+        }
+      },
+      "patternProperties": {
+        ".+": { "$ref": "https://schema.corezoid.com/packages/rabbitmq_credentials/credentials.json" }
+      }
+    }
+  }
+}

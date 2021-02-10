@@ -1,18 +1,21 @@
 kube:
-    helm:
-        ingress:
-            enabled: true
-            name: foo-ingress
-            annotations:
-                fooAnn: fooAnnVal
-            labels: 
-                fooLbl: fooLblVal
-            rules:
-                - host: "foo.example.com"
-                  http:
-                      - path: /foo/path
-                        service_port: 9986
-                        service_name: foo_service
+    ingress:
+        enabled: true
+        name: foo-ingress
+        annotations:
+            fooAnn: fooAnnVal
+        labels: 
+            fooLbl: fooLblVal
+        rules:
+            - host: "foo.example.com"
+              http:
+                  - path: /foo/path
+                    pathType: "thePathType"
+                    service:
+                      name: foo_service
+                      port: 
+                        name: "thePortName"
+                        number: 9986
 release:
     name: 'kube_release'
     helm:

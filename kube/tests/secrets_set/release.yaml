@@ -1,14 +1,13 @@
 kube:
-    helm:
-        secrets: 
-            - name: foo-secret
-              labels:
-                  fooLbl: fooLblVal
-              annotations:
-                  fooAnnot: fooAnnotVal
-              data:
-                  - {key: fooKey, vakue fooVal }
-                  - {key: barKey, vakue barVal }
+    secrets: 
+        - name: foo-secret
+          labels:
+              fooLbl: fooLblVal
+          annotations:
+              fooAnnot: fooAnnotVal
+          data:
+              - {key: fooKey, value: fooVal }
+              - {key: barKey, value: barVal }
 release:
     name: 'kube_release'
     helm:

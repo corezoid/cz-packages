@@ -1,6 +1,5 @@
 kube:
-    helm:
-        secrets: []
+    secrets: []
 release:
     name: 'kube_release'
     helm:

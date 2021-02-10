@@ -1,7 +1,6 @@
 kube:
-    helm:
-        ingress:
-            enabled: false
+    ingress:
+        enabled: false
 release:
     name: 'kube_release'
     helm:

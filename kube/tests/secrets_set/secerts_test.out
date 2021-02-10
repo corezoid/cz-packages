@@ -8,5 +8,5 @@ metadata:
   annotations:
     fooAnnot: "fooAnnotVal"
 stringData:
-  fooKey: 
-  barKey:
+  fooKey: "fooVal"
+  barKey: "barVal"

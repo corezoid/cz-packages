@@ -27,25 +27,20 @@ repositories:
         source: git
         git:
             repo: 'git@github.com:corezoid/gitcall-network-policy.git'
-    rabbitmq:
+    rabbitmq_credentials:
         source: git
         git:
             repo: 'git@github.com:corezoid/cz-packages.git'
-            path: rabbitmq
-    postgresql:
+            path: rabbitmq_credentials
+    postgresql_credentials:
         source: git
         git:
             repo: 'git@github.com:corezoid/cz-packages.git'
-            path: postgresql
-    redis:
-        source: git
-        git:
-            repo: 'git@github.com:corezoid/cz-packages.git'
-            path: redis
+            path: postgresql_credentials
     kube_goodies:
         source: git
         git:
-            repo: 'git@github.com:corezoid/cz-packages.git'
+            repo: 'git@git.corezoid.com:cz/packages.git'
             path: kube_goodies
     kube:
         source: git

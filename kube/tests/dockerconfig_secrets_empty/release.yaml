@@ -1,6 +1,5 @@
 kube:
-    helm:
-        dockerconfig_secrets: []
+    dockerconfig_secrets: []
 release:
     name: 'kube_release'
     helm:

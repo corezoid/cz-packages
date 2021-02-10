@@ -1,4 +1,5 @@
-kube_goodies:
+# [REQUIRED]: object.
+kube:
     dockerconfig_secrets: []
     # Alternative settings:
     # 0#
