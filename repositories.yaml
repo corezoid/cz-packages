@@ -37,11 +37,6 @@ repositories:
         git:
             repo: 'https://github.com/corezoid/cz-packages.git'
             path: postgresql_credentials
-    kube_goodies:
-        source: git
-        git:
-            repo: 'git@git.corezoid.com:cz/packages.git'
-            path: kube_goodies
     kube:
         source: git
         git:
