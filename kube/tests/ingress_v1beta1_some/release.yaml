@@ -1,0 +1,48 @@
+kube:
+    ingress_v1beta1:
+        - enabled: true
+          name: foo-ingress
+          annotations:
+              fooAnn: fooAnnVal
+          labels: 
+              fooLbl: fooLblVal
+          rules:
+              - host: "foo.example.com"
+                http:
+                    - path: /foo/path
+                      service_name: foo_service
+                      service_port: 1111
+        - enabled: false
+          name: bar-ingress
+          rules:
+              - host: "bar.example.com"
+                http:
+                    - path: /bar/path
+                      service_name: bar_service
+                      service_port: 2222
+        - enabled: true
+          name: ololo-ingress
+          rules:
+              - host: "ololo.example.com"
+                http:
+                    - path: /ololo/path
+                      service_name: ololo_service
+                      service_port: 3333
+release:
+    name: 'kube_release'
+    helm:
+        enabled: true
+        chart:
+            version: '0.1.2'
+            description: 'aDescription'
+        context: ''
+        namespace: 'aNs'
+        release: 'aRls'
+        deploy: ['kube']
+    require:
+        kube: 'aVersion'
+    repositories:
+        kube:
+            source: 'local'
+            local:
+                path: '../../'

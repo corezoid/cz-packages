@@ -1,0 +1,8 @@
+{{- if .Values.ingress_v1 }}
+  {{- range .Values.ingress_v1 }}
+    {{- if .enabled }}
+{{- include "cz.kubernetes.ingress.v1" . | indent 0 }}
+---
+    {{- end }}
+  {{- end }}
+{{- end }}

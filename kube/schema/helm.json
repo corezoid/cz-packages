@@ -9,7 +9,14 @@
       "properties": {
         "dockerconfig_secrets": { "$ref": "https://schema.corezoid.com/packages/kube/dockerconfig_secrets_v1.json" },
         "secrets": { "$ref": "https://schema.corezoid.com/packages/kube/secrets_v1.json" },
-        "ingress": { "$ref": "https://schema.corezoid.com/packages/kube/ingress_v1.json" }
+        "ingress_v1": {
+          "type": "array",
+          "items": { "$ref": "https://schema.corezoid.com/packages/kube/ingress_v1.json" }
+        },
+        "ingress_v1beta1": { 
+          "type": "array",
+          "items": { "$ref": "https://schema.corezoid.com/packages/kube/ingress_v1beta1.json" }
+        }
       }
     }
   }

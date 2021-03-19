@@ -2,40 +2,40 @@ repositories:
     gitcall:
         source: git
         git:
-            repo: 'git@github.com:corezoid/gitcall.git'
+            repo: 'https://github.com/corezoid/gitcall.git'
             path: 'component'
     gitcall_migrations:
         source: git
         git:
-            repo: 'git@github.com:corezoid/gitcall-migrations.git'
+            repo: 'https://github.com/corezoid/gitcall-migrations.git'
             path: 'component'
     gitcall_pimp:
         source: git
         git:
-            repo: 'git@github.com:corezoid/gitcall-pimp.git'
+            repo: 'https://github.com/corezoid/gitcall-pimp.git'
             path: 'component'
     gitcall_docker_server:
         source: git
         git:
-            repo: 'git@github.com:corezoid/gitcall-docker-server.git'
+            repo: 'https://github.com/corezoid/gitcall-docker-server.git'
     gitcall_amulet:
         source: git
         git:
-            repo: "git@github.com:corezoid/gitcall-amulet.git"
+            repo: "https://github.com/corezoid/gitcall-amulet.git"
             path: 'component'
     gitcall_network_policy:
         source: git
         git:
-            repo: 'git@github.com:corezoid/gitcall-network-policy.git'
+            repo: 'https://github.com/corezoid/gitcall-network-policy.git'
     rabbitmq_credentials:
         source: git
         git:
-            repo: 'git@github.com:corezoid/cz-packages.git'
+            repo: 'https://github.com/corezoid/cz-packages.git'
             path: rabbitmq_credentials
     postgresql_credentials:
         source: git
         git:
-            repo: 'git@github.com:corezoid/cz-packages.git'
+            repo: 'https://github.com/corezoid/cz-packages.git'
             path: postgresql_credentials
     kube_goodies:
         source: git
@@ -45,10 +45,10 @@ repositories:
     kube:
         source: git
         git:
-            repo: 'git@github.com:corezoid/cz-packages.git'
+            repo: 'https://github.com/corezoid/cz-packages.git'
             path: kube
     docker-registry:
         source: git
         git:
-            repo: 'git@github.com:corezoid/cz-packages.git'
+            repo: 'https://github.com/corezoid/cz-packages.git'
             path: docker-registry

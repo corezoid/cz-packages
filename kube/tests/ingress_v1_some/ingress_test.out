@@ -1,0 +1,42 @@
+---
+# Source: kube_release/charts/kube/templates/ingress_v1.yaml
+apiVersion: "networking.k8s.io/v1"
+kind: Ingress
+metadata:
+  name: "foo-ingress"
+  labels:
+    fooLbl: "fooLblVal"
+  annotations:
+    fooAnn: "fooAnnVal"
+spec:
+  rules:
+    - host: "foo.example.com"
+      http:
+        paths:
+          - path: "/foo/path"
+            pathType: "thePathType"
+            backend:
+              service: 
+                name: "foo_service"
+                port: 
+                  name: "thePortName"
+                  number: 1111
+---
+# Source: kube_release/charts/kube/templates/ingress_v1.yaml
+apiVersion: "networking.k8s.io/v1"
+kind: Ingress
+metadata:
+  name: "ololo-ingress"
+spec:
+  rules:
+    - host: "ololo.example.com"
+      http:
+        paths:
+          - path: "/foo/path"
+            pathType: "thePathType"
+            backend:
+              service: 
+                name: "ololo_service"
+                port: 
+                  name: "thePortName"
+                  number: 3333

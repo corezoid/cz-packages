@@ -1,9 +1,5 @@
-# [REQUIRED]: object.
 kube:
-    dockerconfig_secrets: []
     ingress_v1: []
-    ingress_v1beta1: []
-    secrets: []
 release:
     name: 'kube_release'
     helm:
@@ -12,8 +8,8 @@ release:
             version: '0.1.2'
             description: 'aDescription'
         context: ''
-        namespace: ''
-        release: ''
+        namespace: 'aNs'
+        release: 'aRls'
         deploy: ['kube']
     require:
         kube: 'aVersion'
@@ -21,4 +17,4 @@ release:
         kube:
             source: 'local'
             local:
-                path: '../'
+                path: '../../'
