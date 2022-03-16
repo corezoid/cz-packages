@@ -47,3 +47,13 @@ repositories:
         git:
             repo: 'https://github.com/corezoid/cz-packages.git'
             path: docker-registry
+    dbcall:
+        source: git
+        git:
+            repo: 'https://github.com/corezoid/dbcall.git'
+            path: 'component'
+    dbcall_migrations:
+        source: git
+        git:
+            repo: 'https://github.com/corezoid/dbcall.git'
+            path: 'migrations/component'
