@@ -7,8 +7,8 @@ repositories:
     gitcall_migrations:
         source: git
         git:
-            repo: 'https://github.com/corezoid/gitcall-migrations.git'
-            path: 'component'
+            repo: 'https://github.com/corezoid/gitcall.git'
+            path: 'migrations/component'
     gitcall_pimp:
         source: git
         git:
