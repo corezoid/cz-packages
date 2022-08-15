@@ -11,6 +11,7 @@
         "name": { "type": "string", "minLength": 1, "maxLength": 128, "default": "" },
         "annotations": { "$ref":  "https://schema.corezoid.com/packages/kube/annotations.json" },
         "labels": { "$ref":  "https://schema.corezoid.com/packages/kube/labels.json" },
+        "ingressClassName": { "type": "string", "maxLength": 500 }, 
         "rules": {
           "type": "array",
           "minItems": 1,

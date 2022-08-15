@@ -16,6 +16,9 @@ metadata:
   {{- end }}
   {{- end }}
 spec:
+  {{- if .ingressClassName }}
+  ingressClassName: {{ .ingressClassName | quote }}
+  {{- end }}
   rules:
     {{- range $rule := .rules }}
     - host: {{ $rule.host | quote  }}
